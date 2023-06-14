@@ -6,11 +6,18 @@
   </head>
 
   <body>
+    <%= flash[:notice] %>
+    <p>
     <strong>Title:</strong>
-    <p><%= @book.title %></p>
+    <%= @book.title %>
+    </p>
 
-    <strong>Body</strong>
-    <p><%= @book.body %></p>
-    <a class="back" href="/books">Back</a>
+    <p>
+    <strong>Body:</strong>
+    <%= @book.body %>
+    </p>
+
+      <%= link_to "Edit", edit_book_path(@book) %>
+      <%= link_to "Back", books_path %>
   </body>
 </html>
